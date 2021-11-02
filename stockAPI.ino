@@ -15,7 +15,7 @@ void setup() {
   // USE_SERIAL.setDebugOutput(true);
 
 
-  WiFiMulti.addAP("iPhone", "loc999993");
+  WiFiMulti.addAP("", "");//ENter Network SSID and Password here
 
 }
 
@@ -25,7 +25,7 @@ void loop() {
     for (int i = 0;i<4;i++) {
     HTTPClient http;
     String symbol[] = {"BTC","AAPL","TSLA","F"};
-    String API[] = {"EQ0NJMEJLH56BE6C","WXVDEZNXYYVWKN0B","ANXNFHFXOZP6YP64","JBOK4J3CUE5U30M0"};
+    String API[] = {"","","",""};//Enter API Key here
     String url = "/apps/thinghttp/send_request?api_key="+ API[i];
     USE_SERIAL.print("[HTTP] begin...");
     // configure traged server and url
