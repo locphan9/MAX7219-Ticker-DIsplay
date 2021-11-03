@@ -22,9 +22,9 @@ void setup() {
 void loop() {
   // wait for WiFi connection
   if ((WiFiMulti.run() == WL_CONNECTED)) {
-    for (int i = 0;i<4;i++) {
+    for (int i = 0;i<4;i++) {  //Change i according to the length of symbol[]
     HTTPClient http;
-    String symbol[] = {"BTC","AAPL","TSLA","F"};
+    String symbol[] = {"BTC","AAPL","TSLA","F"};//Enter Tickers here
     String API[] = {"","","",""};//Enter API Key here
     String url = "/apps/thinghttp/send_request?api_key="+ API[i];
     USE_SERIAL.print("[HTTP] begin...");
